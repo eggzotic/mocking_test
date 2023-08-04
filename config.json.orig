@@ -1,0 +1,26 @@
+{
+    "mockPaths": [
+        {
+            "method": "GET",
+            "path": "/v3.1/name/New%20Zealand?fields=tld",
+            "code": 200,
+            "data": {
+                "tld": [
+                    ".nz"
+                ],
+                "fake": true
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/v3.1/name/Australia?fields=tld",
+            "code": 200,
+            "data": {
+                "tld": [
+                    ".au"
+                ],
+                "fake": true
+            }
+        }
+    ]
+}

@@ -1,16 +1,15 @@
 # mocking_test
 
-A new Flutter project.
+Demo app of how to provide selective-mock data to widgets, in such a way as to avoid disturbing the production code. Mock data is brought in thru a config.json file (which must be defined as an asset in pubspec.yaml), from the MockSomeSetup class, so that the widgets are not modified at all. This allows UI code to cover all cases, via providing the various possible data. Paths that do not have mock response/data defined will pass-thru to the real remote end-point - useful if only a few routes need mocking.
+
+Note that the use-case for this is more for developing, rather than unit-testing. It helps exercise your widgets which require rarely-received data (e.g. errors or not-yet-built endpoints).
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Inspired by the http_mock_adapter package, and the suggestions/solutions discussed at https://github.com/lomsa-dev/http-mock-adapter/issues/136, which builds on the capabilities of Dio.
 
-A few resources to get you started if this is your first Flutter project:
+- ```dart run build_runner build --delete-conflicting-outputs```
+- ```flutter run -d chrome```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Richard Shepherd
+August 2023

@@ -1,3 +1,5 @@
+# code-gen files
+*.g.dart
 # Miscellaneous
 *.class
 *.log
